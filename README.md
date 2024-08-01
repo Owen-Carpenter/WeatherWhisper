@@ -6,3 +6,5 @@ This program requires the JavaFX library: https://openjfx.io/
 As well as the latest build of JSON-Java: https://github.com/stleary/JSON-java
 
 Built using Eclipse
+
+![WeatherWhisperIMGDemo](https://github.com/user-attachments/assets/2010abe6-96ea-40ea-98ef-b6e1aedaafaa)
