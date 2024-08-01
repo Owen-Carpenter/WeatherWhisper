@@ -6,3 +6,5 @@ This program requires the JavaFX library: https://openjfx.io/
 As well as the latest build of JSON-Java: https://github.com/stleary/JSON-java
 
 Built using Eclipse
+
+![image](https://github.com/user-attachments/assets/7c164ab1-d1b9-4823-a3fa-c8c0e503c045)
