@@ -1,0 +1,136 @@
+.roundedPane {
+    -fx-background-radius: 10px;
+    -fx-background-color: #ADD8E6;
+    -fx-opacity: .8;
+}
+
+.anchorLabel{
+	-fx-font-family: monospaced;
+    -fx-font-size: 16px; /* Set the font size */
+    -fx-font-weight: bold;
+}
+
+.uvBox{
+	-fx-alignment: center;
+	-fx-spacing: 18;
+	-fx-padding: 0 0 0 12;
+}
+
+.sunsetBox{
+	-fx-background-color: white;
+	
+}
+
+.suriseBox{
+	-fx-background-color: white;
+}
+
+.moonBox{
+	-fx-alignment: center;
+	-fx-spacing: 20;
+	-fx-padding: 0 0 0 50;
+}
+
+.sunBox{
+	-fx-alignment: center;
+	-fx-spacing: 70;
+	-fx-padding: 30 0 0 100;
+}
+
+.sunsetVBox{
+	-fx-spacing: 10;
+	-fx-alignment: center;
+}
+
+.sunriseVBox{
+	-fx-spacing: 10;
+	-fx-alignment: center;
+}
+
+
+.labelBox {
+	-fx-alignment: center;
+}
+
+.fieldBox{
+	-fx-alignment: center;
+}
+
+#locTextField{
+	-fx-font-family: "monospaced";
+    -fx-font-size: 16px; 
+}
+
+#tabs{
+	-fx-background-color: #ADD8E6;
+}
+
+.tab-pane .tab-header-background {
+    -fx-opacity: 0;
+}
+
+#hourlyHbox{
+    -fx-spacing: 10; /* Adjust the spacing value as needed */
+}
+
+#hourlyHbox .pane{
+    -fx-alignment: center; /* Center align the content within each pane */
+}
+
+#dailyVbox{
+	-fx-padding: 10;
+}
+
+#dailyVbox .pane{
+	-fx-padding: 5;
+}
+
+.text-field {
+    -fx-alignment: CENTER;
+	-fx-font-family: monospaced;
+    -fx-font-size: 16px; /* Set the font size */
+    -fx-font-weight: bold;
+}
+
+.tab:selected{
+	-fx-background-color: rgb(35, 131, 158);
+	-fx-transition: ease .3;
+}
+
+.tab {
+    -fx-font-family: "monospaced";
+    -fx-font-size: 14px; 
+    -fx-font-style: italic; 
+    -fx-color: #03414f;
+    -fx-text-fill: white;
+    -fx-background-radius: 5px;
+}
+
+.tab:hover{
+	-fx-background-color: rgb(35, 131, 158);
+    -fx-background-radius: 5px; /* Optional: Add rounded corners for better visual appearance */
+    -fx-cursor: hand; /* Change cursor to a pointer */
+    -fx-transition: -fx-background-color 0.3s ease, -fx-translate-y 0.3s ease;
+    -fx-translate-y: 1px; /* Adjust the value based on your desired sliding distance */
+}
+
+.tab-header-area{
+	-fx-padding: 2px 85px;
+}
+
+.button{
+	-fx-background-color: rgb(35, 131, 158);
+	-fx-text-fill: white;
+	-fx-font-family: "monospaced";
+	-fx-font-size: 12px;
+	-fx-font-weight: bold;
+}
+
+.button:hover{
+	-fx-cursor: hand;
+}
+
+
+
+
+

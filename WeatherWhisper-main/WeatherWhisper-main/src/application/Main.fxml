@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import java.util.ArrayList?>
+<?import javafx.scene.layout.StackPane?>
+
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.FXMLController">
+ 
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="1049.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+   		<ImageView fx:id="backgroundGif" fitHeight="540.0" fitWidth="1049.0">
+        </ImageView>
+      <Pane layoutX="15.0" layoutY="326.0" prefHeight="200.0" prefWidth="318.0" styleClass="roundedPane" AnchorPane.leftAnchor="15.0">
+         <children>
+            <VBox fx:id="dailyVbox" prefHeight="200.0" prefWidth="318.0">
+               <children>
+                  <Pane prefHeight="38.0" prefWidth="318.0">
+                     <children>
+                        <Text fx:id="day1" layoutX="7.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="D1" />
+                        <ImageView fx:id="dailyImg1" fitHeight="40.0" fitWidth="40.0" layoutX="134.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
+                        <Text fx:id="day1Bound" layoutX="230" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="H: L:" />
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="38.0" prefWidth="318.0">
+                     <children>
+                        <Text fx:id="day2" layoutX="7.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="D2" />
+                        <ImageView fx:id="dailyImg2" fitHeight="40.0" fitWidth="40.0" layoutX="134.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
+                        <Text fx:id="day2Bound" layoutX="230" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="H: L:" />
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="38.0" prefWidth="318.0">
+                     <children>
+                        <Text fx:id="day3" layoutX="7.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="D3" />
+                        <ImageView fx:id="dailyImg3" fitHeight="40.0" fitWidth="40.0" layoutX="134.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
+                       <Text fx:id="day3Bound" layoutX="230" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="H: L:" />
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="38.0" prefWidth="318.0">
+                     <children>
+                        <Text fx:id="day4" layoutX="7.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="D4" />
+                        <ImageView fx:id="dailyImg4" fitHeight="40.0" fitWidth="40.0" layoutX="134.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
+                        <Text fx:id="day4Bound" layoutX="230" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="H: L:" />
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="38.0" prefWidth="318.0">
+                     <children>
+                        <Text fx:id="day5" layoutX="7.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="D5" />
+                        <ImageView fx:id="dailyImg5" fitHeight="40.0" fitWidth="40.0" layoutX="134.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
+                        <Text fx:id="day5Bound" layoutX="230" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="H: L:" />
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+      <Pane layoutX="350.0" layoutY="326.0" prefHeight="200.0" prefWidth="200.0" styleClass="roundedPane">
+         <children>
+            <Text layoutX="31.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Wind Speed and Direction" />
+            <Text fx:id="compassText" layoutX="10" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wind Direction: Speed:" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="25.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+            	<image>
+            		<Image url="@../../bin/application/WindDirection.png" />
+        		</image>
+    		</ImageView>
+    		<ImageView fx:id="compassArrow" fitHeight="71.0" fitWidth="73.0" layoutX="64.0" layoutY="29.0">
+            	<Image url="@../../bin/application/compassArrow.png" />
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="570.0" layoutY="201.0" prefHeight="175" prefWidth="200" styleClass="roundedPane">
+         <children>
+         	<VBox fx:id="uvVbox" styleClass="uvBox">
+         		<Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="UV Index" />
+                  <Pane prefHeight="92.0" prefWidth="200.0">
+                     <children>
+               		<ImageView fitHeight="150.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true">
+               			<Image url="@../../bin/application/UVChart.png" />
+               		</ImageView>
+                        <ImageView fx:id="uvArrow" fitHeight="71.0" fitWidth="40.0" layoutX="68.0" layoutY="17.0">
+                           <image>
+                              <Image url="@../../bin/application/compassArrow.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+         		<Text fx:id="uvIndexDisplay" text="uvNum" />
+         	</VBox>
+         </children>
+      </Pane>
+      <Pane layoutX="785.0" layoutY="201.0" prefHeight="175" prefWidth="200" styleClass="roundedPane">
+         <children>
+         	<VBox fx:id="moonBox" styleClass="moonBox">
+	         	<Text fx:id="moonPhaseDisplay" layoutX="105.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Moon Phase" />
+	            <ImageView fx:id="moonImg" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
+	         	<Text fx:id="moonPhaseDisplay" text="Phase" />
+         	</VBox>
+         </children>
+      </Pane>
+      <Pane layoutX="570.0" layoutY="386.0" prefHeight="140" prefWidth="415" styleClass="roundedPane">
+         <children>
+            <Text fx:id="sunsetSunriseDisplay" layoutX="152.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Sunrise and Sunset" />
+            <HBox styleClass="sunBox">
+            	<VBox styleClass="sunriseVBox">
+            		<ImageView fitHeight="75" fitWidth="75" pickOnBounds="true" preserveRatio="true">
+            			<Image url="@sunrise.png" />
+            		</ImageView>
+            		<Text fx:id="sunriseT" text="sunriseTime" />
+            	</VBox>
+            	<VBox styleClass="sunsetVBox">
+            		<ImageView fitHeight="75" fitWidth="75" pickOnBounds="true" preserveRatio="true">
+            			<Image url="@sunset.png" />
+            		</ImageView>
+            		<Text fx:id="sunsetT" text="sunsetTime" />
+            	</VBox>
+            </HBox>
+         </children>
+      </Pane>
+      <TabPane layoutX="15.0" layoutY="202.0" prefHeight="114.0" prefWidth="537.0" styleClass="roundedPane" tabClosingPolicy="UNAVAILABLE" AnchorPane.leftAnchor="15.0">
+        <tabs>
+          <Tab text="Fahrenheit">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <HBox fx:id="hourlyHbox" layoutX="-1.0" layoutY="-1.0" prefHeight="87.0" prefWidth="537.0">
+                           <children>
+                              <Pane prefHeight="87.0" prefWidth="68.0">
+                                 <children>
+                                    <Text layoutX="27.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="${hour1.text}" />
+                                    <Text fx:id="hour1Fahrenheit" layoutX="27.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="F" />
+                                    <ImageView fx:id="hourlyImg1F" fitHeight="34.0" fitWidth="50.0" layoutX="20.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="87.0" prefWidth="68.0">
+                                 <children>
+                                    <Text layoutX="27.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="${hour2.text}" />
+                                    <Text fx:id="hour2Fahrenheit" layoutX="27.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="F" />
+                                    <ImageView fx:id="hourlyImg2F" fitHeight="34.0" fitWidth="50.0" layoutX="20.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="87.0" prefWidth="68.0">
+                                 <children>
+                                    <Text layoutX="27.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="${hour3.text}" />
+                                    <Text fx:id="hour3Fahrenheit" layoutX="27.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="F" />
+                                    <ImageView fx:id="hourlyImg3F" fitHeight="34.0" fitWidth="50.0" layoutX="20.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="87.0" prefWidth="68.0">
+                                 <children>
+                                    <Text layoutX="27.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="${hour4.text}" />
+                                    <Text fx:id="hour4Fahrenheit" layoutX="27.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="F" />
+                                    <ImageView fx:id="hourlyImg4F" fitHeight="34.0" fitWidth="50.0" layoutX="20.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="87.0" prefWidth="68.0">
+                                 <children>
+                                    <Text layoutX="27.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="${hour5.text}" />
+                                    <Text fx:id="hour5Fahrenheit" layoutX="27.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="F" />
+                                    <ImageView fx:id="hourlyImg5F" fitHeight="34.0" fitWidth="50.0" layoutX="20.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="87.0" prefWidth="68.0">
+                                 <children>
+                                    <Text layoutX="27.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="${hour6.text}" />
+                                    <Text fx:id="hour6Fahrenheit" layoutX="27.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="F" />
+                                    <ImageView fx:id="hourlyImg6F" fitHeight="34.0" fitWidth="50.0" layoutX="20.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="87.0" prefWidth="68.0">
+                                 <children>
+                                    <Text layoutX="27.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="${hour7.text}" />
+                                    <Text fx:id="hour7Fahrenheit" layoutX="27.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="F" />
+                                    <ImageView fx:id="hourlyImg7F" fitHeight="34.0" fitWidth="50.0" layoutX="20.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Celsius">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <HBox fx:id="hourlyHbox" layoutX="-1.0" layoutY="-1.0" prefHeight="87.0" prefWidth="537.0">
+                           <children>
+                              <Pane prefHeight="87.0" prefWidth="68.0">
+                                 <children>
+                                    <Text layoutX="27.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="${hour1.text}" />
+                                    <Text fx:id="hour1Celsius" layoutX="27.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C" />
+                                    <ImageView fx:id="hourlyImg1C" fitHeight="34.0" fitWidth="50.0" layoutX="20.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="87.0" prefWidth="68.0">
+                                 <children>
+                                    <Text layoutX="27.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="${hour2.text}" />
+                                    <Text fx:id="hour2Celsius" layoutX="27.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C" />
+                                    <ImageView fx:id="hourlyImg2C" fitHeight="34.0" fitWidth="50.0" layoutX="20.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="87.0" prefWidth="68.0">
+                                 <children>
+                                    <Text layoutX="27.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="${hour3.text}" />
+                                    <Text fx:id="hour3Celsius" layoutX="27.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C" />
+                                    <ImageView fx:id="hourlyImg3C" fitHeight="34.0" fitWidth="50.0" layoutX="20.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="87.0" prefWidth="68.0">
+                                 <children>
+                                    <Text layoutX="27.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="${hour4.text}" />
+                                    <Text fx:id="hour4Celsius" layoutX="27.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C" />
+                                    <ImageView fx:id="hourlyImg4C" fitHeight="34.0" fitWidth="50.0" layoutX="20.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="87.0" prefWidth="68.0">
+                                 <children>
+                                    <Text layoutX="27.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="${hour5.text}" />
+                                    <Text fx:id="hour5Celsius" layoutX="27.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C" />
+                                    <ImageView fx:id="hourlyImg5C" fitHeight="34.0" fitWidth="50.0" layoutX="20.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="87.0" prefWidth="68.0">
+                                 <children>
+                                    <Text layoutX="27.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="${hour6.text}" />
+                                    <Text fx:id="hour6Celsius" layoutX="27.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C" />
+                                    <Text layoutX="27.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C" />
+                                    <ImageView fx:id="hourlyImg6C" fitHeight="34.0" fitWidth="50.0" layoutX="20.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="87.0" prefWidth="68.0">
+                                 <children>
+                                    <Text layoutX="27.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="${hour7.text}" />
+                                    <Text fx:id="hour7Celsius" layoutX="27.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C" />
+                                    <ImageView fx:id="hourlyImg7C" fitHeight="34.0" fitWidth="50.0" layoutX="20.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+          </Tab>
+            <Tab text="Wind">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <HBox fx:id="hourlyHbox" layoutX="-1.0" layoutY="-1.0" prefHeight="87.0" prefWidth="537.0">
+                           <children>
+                              <Pane prefHeight="87.0" prefWidth="68.0">
+                                 <children>
+                                    <Text layoutX="27.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="${hour1.text}" />
+                                    <Text fx:id="hour1Wind" layoutX="20.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MPH" />
+                                    <ImageView fx:id="arrow1" fitHeight="34.0" fitWidth="50.0" layoutX="30" layoutY="27.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="87.0" prefWidth="68.0">
+                                 <children>
+                                    <Text layoutX="27.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="${hour2.text}" />
+                                    <Text fx:id="hour2Wind" layoutX="20.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MPH" />
+                                    <ImageView fx:id="arrow2" fitHeight="34.0" fitWidth="50.0" layoutX="30" layoutY="27.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="87.0" prefWidth="68.0">
+                                 <children>
+                                    <Text layoutX="27.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="${hour3.text}" />
+                                    <Text fx:id="hour3Wind" layoutX="20.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MPH" />
+                                    <ImageView fx:id="arrow3" fitHeight="34.0" fitWidth="50.0" layoutX="30" layoutY="27.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="87.0" prefWidth="68.0">
+                                 <children>
+                                    <Text layoutX="27.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="${hour4.text}" />
+                                    <Text fx:id="hour4Wind" layoutX="20.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MPH" />
+                                    <ImageView fx:id="arrow4" fitHeight="34.0" fitWidth="50.0" layoutX="30" layoutY="27.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="87.0" prefWidth="68.0">
+                                 <children>
+                                    <Text layoutX="27.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="${hour5.text}" />
+                                    <Text fx:id="hour5Wind" layoutX="20.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MPH" />
+                                    <ImageView fx:id="arrow5" fitHeight="34.0" fitWidth="50.0" layoutX="30" layoutY="27.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="87.0" prefWidth="68.0">
+                                 <children>
+                                    <Text layoutX="27.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="${hour6.text}" />
+                                    <Text fx:id="hour6Wind" layoutX="20.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MPH" />
+                                    <ImageView fx:id="arrow6" fitHeight="34.0" fitWidth="50.0" layoutX="30" layoutY="27.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="87.0" prefWidth="68.0">
+                                 <children>
+                                    <Text layoutX="27.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="${hour7.text}" />
+                                    <Text fx:id="hour7Wind" layoutX="20.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MPH" />
+                                    <ImageView fx:id="arrow7" fitHeight="34.0" fitWidth="50.0" layoutX="30" layoutY="27.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Precipitation">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <HBox fx:id="hourlyHbox" layoutX="-1.0" layoutY="-1.0" prefHeight="87.0" prefWidth="537.0">
+                           <children>
+                              <Pane prefHeight="87.0" prefWidth="68.0">
+                                 <children>
+									<Text layoutX="27.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="${hour1.text}" />
+                                    <Text fx:id="hour1Precip" layoutX="27.0" layoutY="50" strokeType="OUTSIDE" strokeWidth="0.0" text="'%'" style="-fx-font-size: 14"/>
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="87.0" prefWidth="68.0">
+                                 <children>
+                                    <Text layoutX="27.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="${hour2.text}" />
+                                    <Text fx:id="hour2Precip" layoutX="27.0" layoutY="50" strokeType="OUTSIDE" strokeWidth="0.0" text="'%'" style="-fx-font-size: 14"/>
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="87.0" prefWidth="68.0">
+                                 <children>
+                                    <Text layoutX="27.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="${hour3.text}" />
+                                    <Text fx:id="hour3Precip" layoutX="27.0" layoutY="50" strokeType="OUTSIDE" strokeWidth="0.0" text="'%'" style="-fx-font-size: 14"/>
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="87.0" prefWidth="68.0">
+                                 <children>
+                                    <Text layoutX="27.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="${hour4.text}" />
+                                    <Text fx:id="hour4Precip" layoutX="27.0" layoutY="50" strokeType="OUTSIDE" strokeWidth="0.0" text="'%'" style="-fx-font-size: 14"/>
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="87.0" prefWidth="68.0">
+                                 <children>
+                                    <Text layoutX="27.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="${hour5.text}" />
+                                    <Text fx:id="hour5Precip" layoutX="27.0" layoutY="50" strokeType="OUTSIDE" strokeWidth="0.0" text="'%'" style="-fx-font-size: 14"/>
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="87.0" prefWidth="68.0">
+                                 <children>
+                                    <Text layoutX="27.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="${hour6.text}" />
+                                    <Text fx:id="hour6Precip" layoutX="27.0" layoutY="50" strokeType="OUTSIDE" strokeWidth="0.0" text="'%'" style="-fx-font-size: 14"/>
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="87.0" prefWidth="68.0">
+                                 <children>
+                                    <Text layoutX="27.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="${hour7.text}" />
+                                    <Text fx:id="hour7Precip" layoutX="27.0" layoutY="50" strokeType="OUTSIDE" strokeWidth="0.0" text="'%'" style="-fx-font-size: 14" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <StackPane styleClass="roundedPane" layoutX="263.0" layoutY="50.0">
+	      	<VBox alignment="BOTTOM_CENTER" styleClass="labelBox">
+		      	<children>
+		        	<HBox alignment="TOP_CENTER" spacing="5" styleClass="fieldBox">
+		            	<TextField fx:id="searchBox" minHeight="30" text="Location:" />
+		            	<Button fx:id="searchButton" minHeight="29" minWidth="45" text="GO" />
+		        	</HBox>
+		        	<Label fx:id="address" styleClass="anchorLabel" text="City, State">
+		            	<padding>
+		                	<Insets top="15.0" />
+		            	</padding>
+		        	</Label>
+		        	<Text fx:id="currentTemp" style="-fx-font-size: 20px" styleClass="anchorLabel" text="Degrees" textAlignment="CENTER" wrappingWidth="525.6171875" />
+		        	<Label fx:id="weatherDesc" styleClass="anchorLabel" text="Weather Type" />
+		        	<Text fx:id="currentBound" styleClass="anchorLabel" text="H: L:" />
+		    	</children>
+		   	</VBox>
+      </StackPane>
+   </children>
+</AnchorPane>
+	
+      <fx:define>
+	      	<ArrayList fx:id="dayLabel">
+	      		<fx:reference source="day1" />
+	     		<fx:reference source="day2" />
+	     		<fx:reference source="day3" />
+	     		<fx:reference source="day4" />
+	     		<fx:reference source="day5" />
+	      	</ArrayList>
+	  <Text fx:id="hour1" />
+	  <Text fx:id="hour2" />
+	  <Text fx:id="hour3" />
+	  <Text fx:id="hour4" />
+	  <Text fx:id="hour5" />
+	  <Text fx:id="hour6" />
+	  <Text fx:id="hour7" />
+	      	<ArrayList fx:id="hour">
+	     		<fx:reference source="hour1" />
+	     		<fx:reference source="hour2" />
+	     		<fx:reference source="hour3" />
+	     		<fx:reference source="hour4" />
+	     		<fx:reference source="hour5" />
+	     		<fx:reference source="hour6" />
+	     		<fx:reference source="hour7" />
+	      	</ArrayList>
+	      
+	      	<ArrayList fx:id="dayBound">
+	      		<fx:reference source="currentBound" />
+	     		<fx:reference source="day1Bound" />
+	     		<fx:reference source="day2Bound" />
+	     		<fx:reference source="day3Bound" />
+	     		<fx:reference source="day4Bound" />
+	     		<fx:reference source="day5Bound" />
+	      	</ArrayList>
+	     
+	      	<ArrayList fx:id="hourFahrenheit">
+	      		<fx:reference source="hour1Fahrenheit" />
+	      		<fx:reference source="hour2Fahrenheit" />
+	      		<fx:reference source="hour3Fahrenheit" />
+	      		<fx:reference source="hour4Fahrenheit" />
+	      		<fx:reference source="hour5Fahrenheit" />
+	      		<fx:reference source="hour6Fahrenheit" />
+	      		<fx:reference source="hour7Fahrenheit" />
+	   		</ArrayList>
+	     
+	      	<ArrayList fx:id="hourCelsius">
+	      		<fx:reference source="hour1Celsius" />
+	      		<fx:reference source="hour2Celsius" />
+	      		<fx:reference source="hour3Celsius" />
+	      		<fx:reference source="hour4Celsius" />
+	      		<fx:reference source="hour5Celsius" />
+	      		<fx:reference source="hour6Celsius" />
+	      		<fx:reference source="hour7Celsius" />
+	      	</ArrayList>
+	  
+	      	<ArrayList fx:id="hourWind">
+	      		<fx:reference source="hour1Wind" />
+	      		<fx:reference source="hour2Wind" />
+	      		<fx:reference source="hour3Wind" />
+	      		<fx:reference source="hour4Wind" />
+	      		<fx:reference source="hour5Wind" />
+	      		<fx:reference source="hour6Wind" />
+	      		<fx:reference source="hour7Wind" />
+	      	</ArrayList>
+	     
+	      	<ArrayList fx:id="hourPrecip">
+	      		<fx:reference source="hour1Precip" />
+	      		<fx:reference source="hour2Precip" />
+	      		<fx:reference source="hour3Precip" />
+	      		<fx:reference source="hour4Precip" />
+	      		<fx:reference source="hour5Precip" />
+	      		<fx:reference source="hour6Precip" />
+	      		<fx:reference source="hour7Precip" />
+	      	</ArrayList>
+	      	
+	      	<ArrayList fx:id="hourSymbolsF">
+	      		<fx:reference source="hourlyImg1F" />
+	      		<fx:reference source="hourlyImg2F" />
+	      		<fx:reference source="hourlyImg3F" />
+	      		<fx:reference source="hourlyImg4F" />
+	      		<fx:reference source="hourlyImg5F" />
+	      		<fx:reference source="hourlyImg6F" />
+	      		<fx:reference source="hourlyImg7F" />
+	      	</ArrayList>
+	      	
+	      	<ArrayList fx:id="hourSymbolsC">
+	      		<fx:reference source="hourlyImg1C" />
+	      		<fx:reference source="hourlyImg2C" />
+	      		<fx:reference source="hourlyImg3C" />
+	      		<fx:reference source="hourlyImg4C" />
+	      		<fx:reference source="hourlyImg5C" />
+	      		<fx:reference source="hourlyImg6C" />
+	      		<fx:reference source="hourlyImg7C" />
+	      	</ArrayList>
+	      	
+	      	<ArrayList fx:id="dailySymbols">
+	      		<fx:reference source="dailyImg1" />
+	      		<fx:reference source="dailyImg2" />
+	      		<fx:reference source="dailyImg3" />
+	      		<fx:reference source="dailyImg4" />
+	      		<fx:reference source="dailyImg5" />
+	      	</ArrayList>
+	      	
+	      	<ArrayList fx:id="arrows">	
+	      		<fx:reference source="arrow1" />
+	      		<fx:reference source="arrow2" />
+	      		<fx:reference source="arrow3" />
+	      		<fx:reference source="arrow4" />
+	      		<fx:reference source="arrow5" />
+	      		<fx:reference source="arrow6" />
+	      		<fx:reference source="arrow7" />
+	      	</ArrayList>
+	      </fx:define>
+	      
+</VBox>
