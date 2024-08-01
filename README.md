@@ -4,9 +4,10 @@ This is a full-stack java application that was developed by Gwen Massingill, Set
 This application allows users to enter a location and displays relevant information for weather such as temperatures, windspeed and direction, and precipitation on an hourly scale, as well as a daily forecast for the following several days.
 This program requires the JavaFX library: https://openjfx.io/
 As well as the latest build of JSON-Java: https://github.com/stleary/JSON-java
+
 Built using Eclipse
 
-###Demo Video
+### Demo Video
 
 https://www.youtube.com/watch?v=N97DNif49KI
 
