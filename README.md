@@ -5,7 +5,12 @@ This application allows users to enter a location and displays relevant informat
 This program requires the JavaFX library: https://openjfx.io/
 As well as the latest build of JSON-Java: https://github.com/stleary/JSON-java
 
-## Built using Eclipse
+## Languages and Tools
+
+![Java](https://raw.githubusercontent.com/github/explore/main/topics/java/java.png)
+![CSS](https://raw.githubusercontent.com/github/explore/main/topics/css/css.png)
+
+##
 
 ### Demo Video
 
